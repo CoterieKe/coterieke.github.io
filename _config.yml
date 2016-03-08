@@ -7,11 +7,11 @@
 
 # Site settings
 title: Coterie
-email: your-email@domain.com
+email: ben@coterie.co.ke
 description: > # this means to ignore newlines until "baseurl:"
   Simple, creative and functional code.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://iz-ben.github.io" # the base hostname & protocol for your site
 twitter_username: iz_ben
 github_username:  iz-ben
 
