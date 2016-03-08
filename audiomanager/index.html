@@ -52,7 +52,10 @@
 <h3>Playlist</h3>
 
 <ul>	
-    <li><a href="#" onClick="audiomanager.playSound(violin); return false;">Amira Saleh2 - when the violin talks (Soundcloud)</a></li>
+    <li><a href="#" onClick="audiomanager.playSound(violin_talks); return false;">Amira Saleh2 - when the violin talks (Soundcloud)</a></li>
+    <li><a href="#" onClick="audiomanager.playSound(crystalize); return false;">Crystallize by Lindsey Stirling (Soundcloud)</a></li>
+    <li><a href="#" onClick="audiomanager.playSound(elise); return false;">Beethoven – Für Elise (Soundcloud)</a></li>
+    <li><a href="#" onClick="audiomanager.playSound(shadows); return false;">Lindsey Stirling - Shadows (Soundcloud)</a></li>
 </ul>
 
 
@@ -71,11 +74,10 @@ var audiomanager = AudioManager;
 
 audiomanager.setSCKey('29e520b21e2ce8431d8a2b0f88e84a8b');
 
-var blue = audiomanager.createSound('http://localhost/audiomanager/dist/mp3/eiffel65-blue.mp3','Eiffel 65 - Blue')
-
-var roma = audiomanager.createSound('http://localhost/audiomanager/dist/mp3/dean-martin-on-an-evening-in-roma.mp3','Dean Martin - On an Evening in Roma');
-
-var violin = audiomanager.createSound('https://soundcloud.com/amirra-salleh/when-the-violin-speaks','Amira Saleh2 - when the violin talks');
+var violin_talks = audiomanager.createSound('https://soundcloud.com/amirra-salleh/when-the-violin-speaks','Amira Saleh2 - when the violin talks');
+var crystalize = audiomanager.createSound('https://soundcloud.com/dubstep/crystallize-by-lindsey','Crystallize by Lindsey Stirling');
+var elise = audiomanager.createSound('https://soundcloud.com/emiclassicsus/beethoven-f-r-elise','Beethoven – Für Elise');
+var shadows = audiomanager.createSound('https://soundcloud.com/lindseystomp/shadows','Lindsey Stirling - Shadows');
 
 //audiomanager.play();
 
