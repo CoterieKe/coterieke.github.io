@@ -1,8 +1,57 @@
 ---
 layout: default
+scripts:
+ - link: https://rawgit.com/iz-ben/AudioManager/master/dist/js/audiomanager.min.js?n=1234
+ - link: /project/audiomanager/js/simple.js
 ---
 
-<div class="home">
-  <h1 class="page-heading">AudioManager</h1>  
-  <p>AudioManager description will go here</p>
+<div class="audiomanager">
+  <h1 class="page-heading">Html5 AudioManager</h1>
+  <p>The <b>AudioManager</b> is available in the global scope as a constructor.</p>
+  <p>This means to access the methods you have to instantiate to a variable using the <b><i>new</i></b> keyword eg</p>
+  {% highlight ruby %}
+var audiomanager = new AudioManager;
+{% endhighlight %}
+  <h2><b>Available Methods</b></h2>
+  <ul>
+  <li>play()</li>
+  <li>pause()</li>
+  <li>resume()</li>
+  <li>playSound()</li>
+  <li>createSound()</li>
+  <li>isPlaying()</li>
+  <li>togglePlay()</li>
+  <li>byteFrequencyData()</li>
+  <li>setSCKey()</li>
+  <li>setVolume()</li>
+  </ul> 
+  <i>New methods will be added here as I expand the framework.</i>
+  <h2><b>Basic Usage</b></h2>
+  {% highlight ruby %}
+var audiomanager = new AudioManager;
+
+var blue = audiomanager.createSound('/mp3/Dead_Combo_-_01_-_Povo_Que_Cas_Descalo.mp3','Dead Combo - Povo Que Cas Descalo'')
+
+audiomanager.play();
+{% endhighlight %}
+ <h2><b>Demo</b></h2>
+ <p>
+ 	<i>Please note that this demo doesn't provide any from of visual feedback about the audio state.</i>
+ </p>
+<a href="#" onClick="audiomanager.play(); return false;">Play</a> | <a href="#" onClick="audiomanager.pause(); return false;">Pause</a>
+
+<p>Volume Control</p>
+
+<input type="range" name="volume" min="1" max="100" onChange="audiomanager.setVolume(this.value)">
+
+<h3>Playlist (click to play/pause/toggle play)</h3>
+
+<ul>
+	<li><a href="#" onClick="audiomanager.playSound(jazzyfrenchy); return false;">Jazzy Frenchy</a></li>
+	<li><a href="#" onClick="audiomanager.playSound(dead_combo); return false;">Dead Combo - Povo Que Cas Descalo</a></li>
+    <li><a href="#" onClick="audiomanager.playSound(ofeliasdream); return false;">Ofelia's Dream</a></li>
+</ul>
+<i><b>Credit:</b> Audio files downloaded from <a href="http://www.bensound.com">http://www.bensound.com</a></i>
+
+<p><b>AudioManager</b> repo: <a href="https://github.com/iz-ben/AudioManager">https://github.com/iz-ben/AudioManager</a></p>
 </div>
